@@ -10,6 +10,17 @@
 
     <table class="table table-bordered table-hover">
 
+        <thead class="thead-dark">
+        <tr> 
+            <th scope="col">Nome</td>
+            <th scope="col">Valor</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Quantidade</th>
+            <th scope="col">Detalhes</th>
+        </tr>
+    </thead>
+    <tbody>
+
         @foreach ($produtos as $p)
         <tr class="table-{{ $p->quantidade <=1 ? 'danger' : ''}}"> 
             <td>{{$p->nome}}</td>
@@ -20,8 +31,15 @@
         </tr>
         @endforeach
 
+    </tbody>
     </table>
     
+    @endif
+
+    @if (old('nome'))
+    <div class="alert alert-success">
+        Produto {{old('nome')}} adicionado com sucesso!
+    </div>
     @endif
 
     <h4>
