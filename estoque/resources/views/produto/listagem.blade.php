@@ -17,6 +17,7 @@
             <th scope="col">Descrição</th>
             <th scope="col">Quantidade</th>
             <th scope="col">Detalhes</th>
+            <th scope="col">Excluir</th>
         </tr>
     </thead>
     <tbody>
@@ -28,6 +29,7 @@
             <td>{{$p->descricao}}</td>
             <td>{{$p->quantidade}}</td>
             <td><a href="/produtos/mostra/{{$p->id}}"><i class="material-icons">search</i></a></td>
+            <td><a href="/produtos/remove/{{$p->id}}"><i class="material-icons">delete</i></a></td>
         </tr>
         @endforeach
 
