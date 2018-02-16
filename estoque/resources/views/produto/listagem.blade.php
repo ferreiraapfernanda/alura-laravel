@@ -16,6 +16,7 @@
             <th scope="col">Valor</th>
             <th scope="col">Descrição</th>
             <th scope="col">Quantidade</th>
+            <th scope="col">Tamanho</th>
             <th scope="col">Detalhes</th>
             <th scope="col">Excluir</th>
         </tr>
@@ -28,6 +29,7 @@
             <td>{{$p->valor}}</td>
             <td>{{$p->descricao}}</td>
             <td>{{$p->quantidade}}</td>
+            <td>{{$p->tamanho}}</td>
             <td><a href="/produtos/mostra/{{$p->id}}"><i class="material-icons">search</i></a></td>
             <td><a href="/produtos/remove/{{$p->id}}"><i class="material-icons">delete</i></a></td>
         </tr>
